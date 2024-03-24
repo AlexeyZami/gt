@@ -1,6 +1,6 @@
 import java.io.IOException;
 
-public class CaezarRunner {
+public class CaesarRunner {
 
     public static void main(String[] args) throws IOException {
 
