@@ -17,13 +17,14 @@ public class UserInteraction {
     public static void interaction(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Какую операцию необходимо выполнить?");
-        System.out.println("1 - зашифровать текст\n2 - расшифровать текст\n3 - взломать шифр");
-        if (scanner.nextInt() == 1){
+        System.out.println("1 - зашифровать текст\n2 - расшифровать текст\n3 - взломать шифр (пока недоступно)");
+        int input = scanner.nextInt();
+        if (input == 1){
             path = createPath();
             code = createCode();
             System.out.println("Зашифрованный текст расположен по пути:");
             System.out.println(Encoder.recordingEncryptedText());
-        } else if (scanner.nextInt() == 2){
+        } else if (input == 2){
             path = createPath();
             code = createCode();
             System.out.println("Расшифрованный текст расположен по пути:");
