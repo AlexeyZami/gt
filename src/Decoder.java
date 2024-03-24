@@ -37,7 +37,7 @@ public class Decoder {
         return decryptedList;
     }
     public static String recordingDecryptedText(){
-        String decryptedFilePath = "/Users/aleksejlalakin/IdeaProjects/PracticeJR/src/caesar/decryptedFile.txt";
+        String decryptedFilePath = UserInteraction.getPathNewFile();
         try {
             FileWriter writer = new FileWriter(decryptedFilePath);
             StringBuilder sb = new StringBuilder();
