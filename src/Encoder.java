@@ -25,4 +25,15 @@ public class Encoder {
         }
         return inputList;
     }
+    public static List<Character> encryption(List<Integer> inputList) {
+        List<Character> encryptedList = new ArrayList<>();
+        for (Integer integer : inputList) {
+            if (Alphabet.alphaList.contains(integer)) {
+                encryptedList.add((char)(((int) integer) + UserInteraction.getCode()));
+            } else {
+                encryptedList.add((char)((int) integer));
+            }
+        }
+        return encryptedList;
+    }
 }
