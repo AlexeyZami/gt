@@ -22,7 +22,12 @@ public class UserInteraction {
             path = createPath();
             code = createCode();
             System.out.println("Зашифрованный текст расположен по пути:");
-            System.out.println(Encoder.writingCiphertext());
+            System.out.println(Encoder.recordingEncryptedText());
+        } else if (scanner.nextInt() == 2){
+            path = createPath();
+            code = createCode();
+            System.out.println("Расшифрованный текст расположен по пути:");
+            System.out.println(Decoder.recordingDecryptedText());
         }
     }
 
