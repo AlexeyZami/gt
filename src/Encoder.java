@@ -36,4 +36,21 @@ public class Encoder {
         }
         return encryptedList;
     }
+    public static String writingCiphertext(){
+        String encryptedFilePath = "/Users/aleksejlalakin/IdeaProjects/PracticeJR/src/caesar/encryptedFile.txt";
+        try {
+            FileWriter writer = new FileWriter(encryptedFilePath);
+            StringBuilder sb = new StringBuilder();
+            for (Character character : encryptedList) {
+                sb.append(character.toString());
+            }
+            String str = sb.toString();
+            writer.write(str);
+            writer.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return encryptedFilePath;
+    }
 }
