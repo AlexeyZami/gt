@@ -1,4 +1,5 @@
-import java.io.FileNotFoundException;
+import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Encoder {
@@ -12,4 +13,16 @@ public class Encoder {
         }
     }
     public static List<Character> encryptedList = encryption(inputList);
+    public static List<Integer> convertToList(String path) throws FileNotFoundException {
+        List<Integer> inputList = new ArrayList<>();
+        InputStream inputStream = new FileInputStream(path);
+        try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream))) {
+            while (bufferedReader.ready()){
+                inputList.add(bufferedReader.read());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return inputList;
+    }
 }
