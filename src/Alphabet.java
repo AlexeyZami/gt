@@ -10,6 +10,6 @@ public class Alphabet {
             list.add((int) alphaString.charAt(i));
         }
         return list;
-        
+
     }
 }

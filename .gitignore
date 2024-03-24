@@ -1,4 +1,6 @@
 ### IntelliJ IDEA ###
+gitTest.iml
+.idea
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
