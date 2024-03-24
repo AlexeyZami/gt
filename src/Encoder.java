@@ -37,7 +37,7 @@ public class Encoder {
         return encryptedList;
     }
     public static String recordingEncryptedText(){
-        String encryptedFilePath = "/Users/aleksejlalakin/IdeaProjects/PracticeJR/src/caesar/encryptedFile.txt";
+        String encryptedFilePath = UserInteraction.getPathNewFile();
         try {
             FileWriter writer = new FileWriter(encryptedFilePath);
             StringBuilder sb = new StringBuilder();
